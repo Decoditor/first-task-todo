@@ -168,7 +168,7 @@ renderTodos();
 setInterval(renderTodos, 60000);
 
 addButton.addEventListener("click", () => {
-  todos.push({
+  todos.unshift({
     id: Date.now(),
     title: formTitle.value,
     description: formDescription.value,
