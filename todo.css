@@ -69,10 +69,6 @@ form button {
   gap: 10px;
 }
 
-.todos-header {
-  grid-column: span 2;
-}
-
 article {
   background-color: white;
   padding: 1rem;
@@ -192,5 +188,8 @@ article > * + * {
   .todo-title {
     flex-direction: row;
     justify-content: space-between;
+  }
+  .todos-header {
+    grid-column: span 2;
   }
 }
