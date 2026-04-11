@@ -148,7 +148,7 @@ function renderTodos() {
     checkbox.checked = todo.status === "Done";
 
     checkbox.addEventListener("change", (e) => {
-      todo.status = e.target.checked ? "Done" : "Pending";
+      todo.status = e.target.checked ? "Done" : "In-Progress";
       renderTodos();
     });
 
