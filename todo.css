@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  max-width: 1100px;
+  width: 100%;
+  margin: 3rem auto;
+  display: grid;
+  gap: 2rem;
+  overflow-x: hidden;
+  padding: 0 1rem;
+}
+
+form,
+#todos-container {
+  background: rgb(228, 228, 228);
+  padding: 1rem;
+  border-radius: 10px;
+  width: 100%;
+}
+form h2 {
+  margin-bottom: 10px;
+}
+
+form .details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+form button {
+  background: rgb(3, 45, 93);
+  color: white;
+  font-size: 14px;
+  width: fit-content;
+}
+
+#todos-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.todos-header {
+  grid-column: span 2;
+}
+
+article {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+article > * + * {
+  margin-top: 10px;
+}
+
+.todo-title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todo-title span,
+.complete span {
+  padding: 4px 1rem;
+  border-radius: 10px;
+  font-size: 16px;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.pending {
+  background-color: #f97316;
+  color: white;
+}
+
+.in-progress {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.done {
+  background-color: #6b7280;
+  color: white;
+}
+
+.priority {
+  color: grey;
+}
+
+.priority span {
+  font-weight: bold;
+}
+
+.priority .high {
+  color: #dc2626;
+}
+
+.priority .medium {
+  color: #f59e0b;
+}
+
+.priority .low {
+  color: #22c55e;
+}
+
+.btns {
+  display: flex;
+  gap: 20px;
+}
+
+.delete-btn {
+  background: rgb(162, 43, 43);
+  color: white;
+}
+
+.edit-btn {
+  border: 1px solid;
+}
+
+.due-priority {
+  display: grid;
+  gap: 4px;
+}
+
+.complete {
+  text-decoration: line-through;
+}
+
+.completed {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-chip {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  #todos-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  form .details {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+  }
+
+  form textarea {
+    grid-column: span 2;
+  }
+
+  .todo-title {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

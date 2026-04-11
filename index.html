@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="todo.css" />
+    <title>Todo App</title>
+  </head>
+  <body>
+    <form>
+      <h2>Add Todo</h2>
+
+      <div class="details">
+        <input
+          type="text"
+          placeholder="Todo title here..."
+          id="title"
+          aria-label="Todo title"
+        />
+
+        <input type="date" name="date" id="date" aria-label="Todo due date" />
+
+        <textarea
+          rows="6"
+          placeholder="Todo description here..."
+          id="description"
+          aria-label="Todo description"
+        ></textarea>
+
+        <button
+          data-testid="test-todo-add-button"
+          type="button"
+          aria-label="Add todo"
+        >
+          + Add Todo
+        </button>
+      </div>
+    </form>
+
+    <section id="todos-container" aria-label="Todo list" aria-live="polite">
+      <h2 class="todos-header">Todos</h2>
+    </section>
+
+    <script type="module" src="todo.js"></script>
+  </body>
+</html>
