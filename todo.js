@@ -126,7 +126,7 @@ function renderTodos() {
           </div>
         </div>
 
-        <label for="checkbox-${todo.id}">
+        <label for="checkbox-${todo.id}" class="completed-check">
           <input type="checkbox" id="checkbox-${todo.id}" ${todo.status === "Done" ? "checked" : ""} />
           Completed
         </label>

@@ -185,10 +185,6 @@ article.overdue-card {
   color: white;
 }
 
-/* =======================
-   OVERDUE INDICATOR
-======================= */
-
 .overdue-indicator {
   background: #fee2e2;
   color: #b91c1c;
@@ -335,6 +331,13 @@ button:hover {
   border: 1px solid #d1d5db;
   font-size: 14px;
   width: 100%;
+}
+
+.completed-check {
+  display: flex;
+  justify-items: center;
+  width: fit-content;
+  gap: 10px;
 }
 
 .hidden {
